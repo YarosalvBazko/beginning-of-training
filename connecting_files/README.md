@@ -10,7 +10,9 @@ connecting_files/
 │ ├── header.php # Header (menu, styles)
 │ └── footer.php # Footer (copyright)
 ├── index.php # Main page
-└── about.php # About page
+├── about.php # About page
+├── check_post.php # POST form handler
+└── check_get.php # GET form handler
 ```
 
 ## 📄 Contents
@@ -31,6 +33,16 @@ connecting_files/
 ### `about.php`
 - About page
 - Includes header and footer
+
+### `check_post.php`
+
+- Handles POST form data
+- Validates fields: username, email, password, message
+- Redirects on success
+### `check_get.php`
+
+- Handles GET form data
+- Displays all GET parameters
 
 ## 🛠️ Run
 
@@ -77,27 +89,39 @@ connecting_files/
 │   ├── header.php      # Шапка (меню, стили)
 │   └── footer.php      # Подвал (копирайт)
 ├── index.php           # Главная страница
-└── about.php           # Страница "Про нас"
+├── about.php           # Страница "Про нас"
+├── check_post.php      # Обработчик POST-формы
+└── check_get.php       # Обработчик GET-формы
 ```
 ## 📄 Что внутри
 
-### blocks/header.php
+### `blocks/header.php`
 
 - HTML-шапка с меню
 - Подключение Bootstrap
 - Заголовок страницы из переменной $title
-### blocks/footer.php
+### `blocks/footer.php`
 
 - Подвал с копирайтом
 - Закрывающие теги
-### index.php
+### `index.php`
 
 - Главная страница
 - Подключает шапку и подвал
-### about.php
+### `about.php`
 
 - Страница "Про нас"
 - Подключает шапку и подвал
+### `check_post.php`
+
+- Обрабатывает данные из POST-формы
+- Проверяет поля: имя, email, пароль, сообщение
+- Перенаправляет при успехе
+### `check_get.php`
+
+- Обрабатывает данные из GET-формы
+- Выводит все GET-параметры
+
 ## 🛠️ Запуск
 
 ### Способ 1: Через PHP-сервер
