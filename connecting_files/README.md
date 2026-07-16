@@ -7,12 +7,12 @@
 ```bash
 connecting_files/
 ├── blocks/
-│ ├── header.php # Header (menu, styles)
-│ └── footer.php # Footer (copyright)
-├── index.php # Main page
-├── about.php # About page
-├── check_post.php # POST form handler
-└── check_get.php # GET form handler
+│ ├── header.php     # Header (menu, styles)
+│ └── footer.php     # Footer (copyright)
+├── index.php        # Main page
+├── about.php        # About page
+├── check_post.php   # POST form handler
+└── check_get.php    # GET form handler
 ```
 
 ## 📄 Contents
