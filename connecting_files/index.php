@@ -58,14 +58,14 @@
 
     // === РАБОТА С ФАЙЛАМИ ===
     $file = fopen("text.tht", "a");
-    fwrite($file, "\nExample text\nHello");
+    // fwrite($file, "\nExample text\nHello"); // что бы не добавлялось 
     fclose($file);
     
     $filename = "text.tht";
     $file_2 = fopen("text.tht", "r");
-    $content = fread($file_2, filesize($filename));
+    // $content = fread($file_2, filesize($filename)); // что бы не добавлялось 
     fclose($file_2);
-    echo $content. '<br>';
+    // echo $content. '<br>'; // что бы не добавлялось 
 
     file_put_contents("a.txt", "example\nhello");
     echo file_get_contents("a.txt"). '<br>';
@@ -76,7 +76,36 @@
 
     echo __FILE__."<br>";
     chmod(__FILE__, 0777);
-    echo fileperms(__FILE__);
+    echo fileperms(__FILE__)."<br>";
+
+    // === ИНФОРМАЦИЯ О СЕРВЕРЕ ===
+    // phpinfo();  // полная информация о PHP
+    
+    // print_r($_SERVER) - выводит все серверные переменные
+    echo '<pre>';
+    print_r($_SERVER);
+    echo '</pre>';
+
+    // === СЕРВЕРНЫЕ ПЕРЕМЕННЫЕ ===
+    // $_SERVER['HTTP_HOST']      - хост (домен)
+    // $_SERVER['REQUEST_URI']    - URI запроса (путь + параметры)
+    // $_SERVER['HTTP_USER_AGENT'] - браузер пользователя
+    echo $_SERVER['HTTP_HOST'].' - '. $_SERVER['REQUEST_URI']. '<br>';
+    echo $_SERVER['HTTP_USER_AGENT']. '<br>';
+
+    // === РЕДИРЕКТ (удаление параметра source) ===
+    // Если в URL есть параметр ?source=...
+    if(isset($_GET["source"]) && $_GET["source"] != "") {
+        // Разбиваем URI по ?source=
+        $link = explode("?source=", $_SERVER['REQUEST_URI']);
+        // Формируем новый URL без параметра
+        $redirect = "http://" . $_SERVER['HTTP_HOST'] . $link[0];
+        
+        // Отправляем заголовки для редиректа (301 - постоянный)
+        header('HTTP/1.1 301 Moved Permanently');
+        header('Location: ' . $redirect);
+        exit();  // останавливаем выполнение скрипта
+    }
 
     // === ПОДКЛЮЧЕНИЕ ПОДВАЛА ===
     require "blocks/footer.php";
@@ -180,6 +209,38 @@
     <!-- ────────────────────────────────────────────────────────────── -->
 
 
+    <!-- ──────────────────────────────────────────────────────────────
+    6. СЕРВЕРНЫЕ ПЕРЕМЕННЫЕ ($_SERVER)
+    ────────────────────────────────────────────────────────────── -->
+    <!-- 
+    $_SERVER['HTTP_HOST']       →  хост (домен) например: localhost:8000
+    $_SERVER['REQUEST_URI']     →  URI запроса (путь + параметры) например: /about.php?source=123
+    $_SERVER['HTTP_USER_AGENT'] →  информация о браузере пользователя
+    $_SERVER['REMOTE_ADDR']     →  IP-адрес пользователя
+    $_SERVER['REQUEST_METHOD']  →  метод запроса (GET, POST, etc.)
+    $_SERVER['QUERY_STRING']    →  строка запроса (все параметры)
+    
+    print_r($_SERVER)  →  выводит все серверные переменные
+    phpinfo()          →  полная информация о PHP
+    -->
+    <!-- ────────────────────────────────────────────────────────────── -->
+
+
+    <!-- ──────────────────────────────────────────────────────────────
+    7. РЕДИРЕКТ (header)
+    ────────────────────────────────────────────────────────────── -->
+    <!-- 
+    header('Location: URL')  →  перенаправляет на указанный URL
+    header('HTTP/1.1 301 Moved Permanently')  →  статус 301 (постоянный редирект)
+    exit()  →  останавливает выполнение скрипта
+    
+    Пример:
+    header('Location: /index.php');
+    exit();
+    -->
+    <!-- ────────────────────────────────────────────────────────────── -->
+
+
     <!-- ============================================================
     КРАТКОЕ РЕЗЮМЕ
     ============================================================ -->
@@ -190,4 +251,6 @@
     СТРОКИ: strpos(), explode(), implode()
     ФАЙЛЫ:  fopen(), fwrite(), fread(), fclose(), file_put_contents(), 
             file_get_contents(), file_exists(), rename(), unlink(), chmod(), __FILE__
+    СЕРВЕР: $_SERVER, print_r($_SERVER), phpinfo()
+    РЕДИРЕКТ: header('Location: ...'), header('HTTP/1.1 301 ...'), exit()
     ============================================================ -->
