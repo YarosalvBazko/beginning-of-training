@@ -1,19 +1,45 @@
 <?php
+    // === НАЧАЛО БУФЕРИЗАЦИИ И СЕССИИ ===
+    ob_start();        // Включает буферизацию вывода
+    session_start();   // Запускает сессию (для работы $_SESSION)
+
     // === ПЕРЕМЕННАЯ ЗАГОЛОВКА ===
     $title = "Главная страница";
-    
+
     // === ПОДКЛЮЧЕНИЕ ШАПКИ ===
     require_once "blocks/header.php";
+    
 ?>
 
 <!-- === ОСНОВНОЙ КОНТЕНТ === -->
-<h1>Главная страницца</h1>
+<h2>Главная страницца</h2>
 
 <?php
+
+    // === РАБОТА С COOKIE ===
+    $user_name = "Alex";
+    
+    // setcookie() - устанавливает cookie
+    // (имя, значение, время жизни, путь, домен, защита, httpOnly)
+    setcookie("user_name", $user_name, time() + 180);  // живет 180 секунд (3 минуты)
+    
+    // print_r($_COOKIE) - выводит все cookie
+    print_r($_COOKIE);
+
+    // Удаление cookie (установка времени в прошлом)
+    // setcookie("user_name", $user_name, time() - 180);
+
+    // Доступ к cookie
+    // echo $_COOKIE['user_name'];
+
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 85%; margin-right: 15%; margin-left: 0;">';
+    
     // === РАБОТА С ДАТОЙ И ВРЕМЕНЕМ ===
     echo date('m-l H:i:s', time() + 10800) . '<br>';
     echo date('m-d H:i:s', strtotime("-1 Day +10 Hour")) . '<br>';
     echo date('m-d H:i:s', strtotime("Last Monday")) . '<br>';
+
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 10%; margin-right: 90%; margin-left: 0;">';
 
     // === РАБОТА С МАССИВАМИ ===
     $lis = [5, 7, 3, 6, 7, 8];
@@ -24,12 +50,16 @@
     print_r($arr);
     echo '<br>';
 
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 15%; margin-right: 85%; margin-left: 0;">';
+
     // === ОБЪЕДИНЕНИЕ МАССИВОВ ===
     $arr_1 = [5, 7];
     $arr_2 = [6, 8, 9];
     $arr_3 = array_merge($arr_1, $arr_2);
     print_r($arr_3);
     echo '<br>';
+
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 30%; margin-right: 70%; margin-left: 0;">';
 
     // === ПОИСК В МАССИВЕ ===
     if(in_array(3, $lis) == "")
@@ -39,15 +69,21 @@
     print_r($lis) . '<br>';
     echo '<br>';
 
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 30%; margin-right: 70%; margin-left: 0;">';
+
     // === ПРОВЕРКА ТИПОВ ===
     $x = 10;
     echo gettype($x) . '<br>';
     echo is_numeric($x) . '<br>';
     echo is_integer($x) . '<br>';
 
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 2%; margin-right: 98%; margin-left: 0;">';
+
     // === РАБОТА СО СТРОКАМИ ===
     $str = "Example";
     echo strpos($str, "am") . '<br>';
+
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 2%; margin-right: 98%; margin-left: 0;">';
 
     // === РАЗДЕЛЕНИЕ И ОБЪЕДИНЕНИЕ СТРОК ===
     $words = "john,bob,alex";
@@ -55,6 +91,8 @@
     print_r($arr_words) . '<br>';
     echo '<br>';
     echo implode(" | ", $arr_words). '<br>';
+
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 25%; margin-right: 75%; margin-left: 0;">';
 
     // === РАБОТА С ФАЙЛАМИ ===
     $file = fopen("text.tht", "a");
@@ -78,6 +116,8 @@
     chmod(__FILE__, 0777);
     echo fileperms(__FILE__)."<br>";
 
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 50%; margin-right: 50%; margin-left: 0;">';
+
     // === ИНФОРМАЦИЯ О СЕРВЕРЕ ===
     // phpinfo();  // полная информация о PHP
     
@@ -86,6 +126,8 @@
     print_r($_SERVER);
     echo '</pre>';
 
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0; width: 50%; margin-right: 50%; margin-left: 0;">';
+
     // === СЕРВЕРНЫЕ ПЕРЕМЕННЫЕ ===
     // $_SERVER['HTTP_HOST']      - хост (домен)
     // $_SERVER['REQUEST_URI']    - URI запроса (путь + параметры)
@@ -93,6 +135,8 @@
     echo $_SERVER['HTTP_HOST'].' - '. $_SERVER['REQUEST_URI']. '<br>';
     echo $_SERVER['HTTP_USER_AGENT']. '<br>';
 
+
+    
     // === РЕДИРЕКТ (удаление параметра source) ===
     // Если в URL есть параметр ?source=...
     if(isset($_GET["source"]) && $_GET["source"] != "") {
@@ -107,6 +151,8 @@
         exit();  // останавливаем выполнение скрипта
     }
 
+    echo '<hr style="border: 1px dashed #ccc; margin: 1px 0;">';
+
     // === ОТПРАВКА ПОЧТЫ ===
     $message = "Сообщение ";
     $to = "ybazko08@gmail.com";
@@ -120,10 +166,13 @@
     // Отправка письма (закомментировано для локальной разработки)
     // mail($to, $subject, $message, $headers);
 
+
+
     // === ПОДКЛЮЧЕНИЕ ПОДВАЛА ===
     require "blocks/footer.php";
 ?>
 
+<hr style="border: 0; height: 10px; background: linear-gradient(to right, transparent, #333, transparent);">
 
     <!-- ============================================================
     ПОДРОБНЫЙ СПРАВОЧНИК ПО ТОМУ, ЧТО БЫЛО В КОДЕ
@@ -278,6 +327,34 @@
     <!-- ────────────────────────────────────────────────────────────── -->
 
 
+    <!-- ──────────────────────────────────────────────────────────────
+    9. COOKIE И SESSION
+    ────────────────────────────────────────────────────────────── -->
+    <!-- 
+    Cookie - данные, хранящиеся на стороне клиента (в браузере)
+    
+    setcookie(name, value, expire, path, domain, secure, httponly)
+    setcookie("user_name", "Alex", time() + 180);  // живет 180 секунд
+    
+    Удаление cookie:
+    setcookie("user_name", "Alex", time() - 180);  // время в прошлом
+    
+    Доступ к cookie:
+    $_COOKIE['user_name']  →  получает значение cookie
+    
+    print_r($_COOKIE)  →  выводит все cookie
+    
+    Session - данные, хранящиеся на стороне сервера
+    
+    session_start()  →  запускает сессию (должна быть в начале скрипта)
+    $_SESSION['key'] = 'value'  →  запись в сессию
+    $value = $_SESSION['key']  →  чтение из сессии
+    
+    ob_start()  →  включает буферизацию вывода (позволяет отправлять заголовки после вывода)
+    -->
+    <!-- ────────────────────────────────────────────────────────────── -->
+
+
     <!-- ============================================================
     КРАТКОЕ РЕЗЮМЕ
     ============================================================ -->
@@ -291,4 +368,6 @@
     СЕРВЕР: $_SERVER, print_r($_SERVER), phpinfo()
     РЕДИРЕКТ: header('Location: ...'), header('HTTP/1.1 301 ...'), exit()
     ПОЧТА:  mail($to, $subject, $message, $headers)
+    COOKIE: setcookie(), $_COOKIE
+    SESSION: session_start(), $_SESSION, ob_start()
     ============================================================ -->
