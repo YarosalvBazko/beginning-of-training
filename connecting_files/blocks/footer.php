@@ -1,4 +1,5 @@
-<footer>Все прова защищены &copy; 2050</footer>
+<footer class="mt-5">Все прова защищены &copy; 2050</footer>
+</div>
 </body>
 </html>
 
