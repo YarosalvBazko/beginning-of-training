@@ -1,5 +1,5 @@
 <?php
-$title = "Строки в PHP";
+$title = "Switch-case";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
