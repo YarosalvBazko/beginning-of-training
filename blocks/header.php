@@ -131,6 +131,7 @@
             <a href="/pages/math.php">🔢 Математика</a>
             <a href="/pages/switch.php">🔀 Switch</a>
             <a href="/pages/cookies.php">🍪 Cookies</a>
+            <a href="pages/datetime.php">⏰ Дата и время</a>
             <!-- Сюда будем добавлять новые темы -->
         </nav>
 </header>
