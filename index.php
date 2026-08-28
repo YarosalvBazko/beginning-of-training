@@ -110,6 +110,18 @@ require_once "blocks/header.php";
             </div>
         </div>
     </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">📝 Формы</h5>
+                <p class="card-text">GET, POST, валидация, сессии, безопасность.</p>
+                <a href="pages/forms.php" class="btn btn-primary">Перейти →</a>
+            </div>
+        </div>
+    </div>
+
+        
 </div>
 
 <?php require_once "blocks/footer.php"; ?>
