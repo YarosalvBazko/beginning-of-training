@@ -133,6 +133,7 @@
             <a href="/pages/cookies.php">🍪 Cookies</a>
             <a href="/pages/datetime.php">⏰ Дата и время</a>
             <a href="/pages/types.php">📦 Типы данных</a>
+            <a href="/pages/files.php">📁 Файлы</a>
             <!-- Сюда будем добавлять новые темы -->
         </nav>
 </header>

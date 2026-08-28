@@ -100,6 +100,16 @@ require_once "blocks/header.php";
             </div>
         </div>
     </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">📁 Файлы</h5>
+                <p class="card-text">fopen, fwrite, fread, file_get_contents, file_exists.</p>
+                <a href="pages/files.php" class="btn btn-primary">Перейти →</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php require_once "blocks/footer.php"; ?>
