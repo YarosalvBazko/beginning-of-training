@@ -231,10 +231,10 @@ DemoHelper::show(
     $_SESSION["subject"] = $subject;
     $_SESSION["message"] = $message;
 
-    if(strline($user_name) <= 1) {
+    if(strlen($user_name) <= 1) {
         $_SESSION["error_username"] = "Введите корректное имя";
         echo "Ошибка: имя слишком короткое<br>";
-        echo Сохренено в сессии: " . $_SESSION["error_username"];
+        echo "Сохренено в сессии: " . $_SESSION["error_username"];
     } elseif(strlen($from) < 5 || strpos($from, "@") == false) {
         $_SESSION["erroe_email"] = "Вы ввели некорректный email";
         echo "Ошибка: email некорректен <br>";
