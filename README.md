@@ -1,6 +1,6 @@
 # Beginning of Training 🚀
 
-### Repository for learning PHP basics. Examples of arithmetic, strings, and conditions.
+### Repository for learning PHP basics. Examples of arithmetic, strings, switch-case, and conditional statements.
 
 ## 📁 Files
 ```bash
@@ -48,7 +48,7 @@ php -S localhost:8000
 
 ## Beginning of Training 🚀
 
-### Репозиторий для изучения основ PHP. Примеры работы с арифметикой, строками и условиями.
+### Репозиторий для изучения основ PHP. Примеры работы с арифметикой, строками, switch-case и условиями.
 ```bash
 Beginning-of-training/
 ├── functions.php              # Математика
@@ -56,6 +56,7 @@ Beginning-of-training/
 ├── operator Switch-case.php   # Switch-case
 └── сonditional_operators.php  # Условные операторы (if/elseif/else)
 ```
+## 📁 Файлы
 
 ### functions.php - Математика
 

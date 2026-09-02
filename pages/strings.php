@@ -46,7 +46,7 @@ DemoHelper::show(
 DemoHelper::show(
     '$str = "hello";
     echo strtoupper($str);',
-    'Переобразование в верхний регистр (strtoopper)',
+    'Переобразование в верхний регистр (strtoupper)',
     'Все буквы становятся заглавными'
 );
 
