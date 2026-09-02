@@ -1,92 +1,109 @@
-# Beginning of Training 🚀
+# 📚 PHP Справочник с примерами 🚀
 
-### Repository for learning PHP basics. Examples of arithmetic, strings, switch-case, and conditional statements.
+### Интерактивный справочник по PHP. Код и результат его выполнения на одной странице.
 
-## 📁 Files
+---
+
+## 📁 Структура проекта
+
 ```bash
-Beginning-of-training/
-├── functions.php # Math operations
-├── lines.php # Strings
-├── operator Switch-case.php # Switch-case
-└── сonditional_operators.php # Conditional operators (if/elseif/else)
+Beginning of training/
+├── blocks/                     # Шапка и подвал сайта
+│   ├── header.php              # Меню и стили
+│   └── footer.php              # Копирайт
+├── includes/                   # Вспомогательный код
+│   └── DemoHelper.php          # Класс для демонстрации кода
+├── pages/                      # Страницы-демонстрации (11 тем)
+│   ├── arrays.php              # Массивы
+│   ├── cycles.php              # Циклы
+│   ├── functions.php           # Функции
+│   ├── strings.php             # Строки
+│   ├── math.php                # Математика
+│   ├── switch.php              # Switch-case
+│   ├── cookies.php             # Cookie
+│   ├── datetime.php            # Дата и время
+│   ├── types.php               # Типы данных
+│   ├── files.php               # Файлы
+│   └── forms.php               # Формы (GET, POST, сессии)
+└── index.php                   # Главная страница-каталог
 ```
 
+## 📚 Список тем
+| № | Тема | Файл | Описание |
+|---|------|------|----------|
+| 1 | 📊 Массивы | `pages/arrays.php` | Создание, изменение, удаление, сортировка |
+| 2 | 🔄 Циклы | `pages/cycles.php` | for, while, do-while, break, continue |
+| 3 | ⚡ Функции | `pages/functions.php` | Объявление, параметры, return, global, static |
+| 4 | 📝 Строки | `pages/strings.php` | strlen, trim, strtoupper, explode, implode, md5 |
+| 5 | 🔢 Математика | `pages/math.php` | +, -, *, /, %, abs, ceil, floor, round, mt_rand |
+| 6 | 🔀 Switch-case | `pages/switch.php` | switch, case, break, default |
+| 7 | 🍪 Cookie | `pages/cookies.php` | setcookie, $_COOKIE, удаление cookie |
+| 8 | ⏰ Дата и время | `pages/datetime.php` | date, time, strtotime, форматирование |
+| 9 | 📦 Типы данных | `pages/types.php` | gettype, is_numeric, is_integer, is_string |
+| 10 | 📁 Файлы | `pages/files.php` | fopen, fwrite, fread, file_get_contents, file_exists |
+| 11 | 📝 Формы | `pages/forms.php` | GET, POST, валидация, сессии, безопасность |
+|
 
-## 📄 Contents
+# 🛠️ Как запустить
+# Перейдите в папку проекта
+cd ~/Dev/Dev_php/Beginning\ of\ training
 
-### `functions.php` - Math
-- Operations: `+`, `-`, `*`, `/`, `%`
-- Assignment: `+=`, `-=`, `*=`, `/=`
-- Increment/Decrement: `++`, `--`
-- Constants: `M_PI`, `M_E`
-- Functions: `abs()`, `ceil()`, `floor()`, `round()`, `mt_rand()`, `max()`, `min()`
-
-### `lines.php` - Strings
-- Quotes: `" "` vs `' '`
-- Concatenation: `.`
-- Functions: `strlen()`, `trim()`, `strtoupper()`
-- Hashing: `md5()`
-
-### `operator Switch-case.php` - Switch-case
-- Alternative to if/elseif
-- Syntax: `switch($var) { case value: code; break; }`
-- `default` for unmatched cases
-
-### `сonditional_operators.php` - Conditional Operators
-- `if` / `elseif` / `else`
-- Logical operators: `&&` (AND), `||` (OR)
-- Nested conditions
-
-
-## 🛠️ Run
-
-```bash
+# Запустите сервер
 php -S localhost:8000
-```
-#
-#
 
-## Beginning of Training 🚀
+## Откройте в браузере:
+http://localhost:8000/
 
-### Репозиторий для изучения основ PHP. Примеры работы с арифметикой, строками, switch-case и условиями.
-```bash
-Beginning-of-training/
-├── functions.php              # Математика
-├── lines.php                  # Строки
-├── operator Switch-case.php   # Switch-case
-└── сonditional_operators.php  # Условные операторы (if/elseif/else)
-```
-## 📁 Файлы
+## 📄 Что внутри
 
-### functions.php - Математика
+blocks/header.php
 
-- Операции: +, -, *, /, %
-- Присваивание: +=, -=, *=, /=
-- Инкремент/декремент: ++, --
-- Константы: M_PI, M_E
-- Функции: abs(), ceil(), floor(), round(), mt_rand(), max(), min()
+- HTML-шапка с меню навигации
+- Подключение Bootstrap
+- CSS-стили для карточек с демонстрациями
+- Заголовок страницы из переменной $title
+## blocks/footer.php
 
-### lines.php - Строки
+- Подвал с копирайтом
+- Автоматическое обновление года: <?php echo date('Y'); ?>
+## includes/DemoHelper.php
 
-- Кавычки: " " vs ' '
-- Конкатенация: .
-- Функции: strlen(), trim(), strtoupper()
-- Хеши: md5()
+- Класс для демонстрации кода и его выполнения
+- Использует ob_start() и eval() для выполнения кода
+- Показывает код и результат в красивой карточке
+## pages/*.php
 
-### operator Switch-case.php - Switch-case
+- 11 страниц-демонстраций по разным темам
+- Каждая страница содержит примеры кода и их результат
+## index.php
 
-- Альтернатива if/elseif
-- Синтаксис: switch($var) { case значение: код; break; }
-- default для несовпавших случаев
+- Главная страница-каталог
+- Карточки со всеми темами для навигации
+## 💡 Как это работает
 
-### сonditional_operators.php - Условные операторы
+## DemoHelper::show()
 
-- if / elseif / else
-- Логические операторы: && (И), || (ИЛИ)
-- Вложенные условия
+### Главный инструмент проекта. Он:
 
-## Запуск
-```bash
-php -S localhost:8000
-```
-  Открой http://localhost:8000/functions.php
+- Принимает PHP-код как строку
+- Выполняет его через eval()
+- Показывает код и результат в красивой карточке
+- Ключевые функции PHP
+
+## Ключевые функции PHP
+
+| Функция |	Описание |	Документация |
+|---------|----------|---------------|
+ob_start()	| Включает буферизацию вывода |	[php.net/ob_start](https://www.php.net/ob_start)
+ob_get_clean() |	Получает и очищает буфер |	[php.net/ob_get_clean](https://www.php.net/manual/ru/function.ob-get-clean.php)
+eval() |	Выполняет код из строки |	[php.net/eval](https://www.php.net/manual/ru/function.eval.php)
+htmlspecialchars() |	Преобразует спецсимволы в HTML |	[php.net/htmlspecialchars](https://www.php.net/manual/ru/function.htmlspecialchars.php)
+---
+## 🔗 Полезные ссылки
+
+
+- [Официальная документация PHP](https://www.php.net/manual/ru/)
+- [Bootstrap](https://getbootstrap.com) — фреймворк для стилей
+- [Функции](https://www.php.net/manual/ru/functions.user-defined.php)
+- [Массивы](https://www.php.net/manual/ru/language.types.array.php)
+- [Циклы](https://www.php.net/manual/ru/control-structures.for.php)
