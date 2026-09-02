@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = "Формы в PHP";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
@@ -134,8 +135,7 @@ DemoHelper::show(
 // ССЫЛКА: https://www.php.net/manual/ru/reserved.variables.session.php
 // ============================================================
 DemoHelper::show(
-    'session_start();
-    if(!isset($_SESSION["count"])) {
+    'if(!isset($_SESSION["count"])) {
         $_SESSION["count"] = 0;
     }
     $_SESSION["count"]++;
@@ -214,9 +214,7 @@ DemoHelper::show(
 // ССЫЛКА: https://www.php.net/manual/ru/function.htmlspecialchars.php
 // ============================================================
 DemoHelper::show(
-    'session_start();
-    
-    function redirect() {
+    'function redirect() {
         header("Location: contact.php");
         exit;
     }
@@ -269,9 +267,7 @@ DemoHelper::show(
 // ССЫЛКА: https://www.php.net/manual/ru/reserved.variables.session.php
 // ============================================================
 DemoHelper::show(
-    'session_start();
-    
-    echo "Ошибка из сессии:<br>";
+    'echo "Ошибка из сессии:<br>";
     echo "- Имя: " . ($_SESSION["error_username"] ?? "нет ошибки") . "<br>";
     echo "- Email: " . ($_SESSION["error_email"] ?? "нет ошибки") . "<br>";
     echo "- Тема: " . ($_SESSION["error_subject"] ?? "нет ошибки") . "<br>";
