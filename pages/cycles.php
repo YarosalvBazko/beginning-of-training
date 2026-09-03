@@ -1,14 +1,10 @@
 <?php
-$title = "Циклы в PHP";
+$title = "🔄 Циклы в PHP";
+$lead = "Циклы for, while, do-while, break, continue..";
+
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
-
-<h1 class="section-title">🔄 Циклы в PHP</h1>
-
-<p class="lead">Циклы for, while, do-while, break, continue.</p>
-
-<a href="/index.php" class="back-link">← Назад к списку</a>
 
 <?php
 // ============================================================

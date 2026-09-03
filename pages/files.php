@@ -1,14 +1,10 @@
 <?php
-$title = "Работа с файлами в PHP";
+$title = "📁 Работа с файлами в PHP";
+$lead = "Чтение, запись, проверка существования файлов.";
+
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
-
-<h1 class="section-title">📁 Работа с файлами в PHP</h1>
-
-<p class="lead">Чтение, запись, проверка существования файлов.</p>
-
-<a href="/index.php" class="back-link">← Назад к списку</a>
 
 <?php
 // ============================================================

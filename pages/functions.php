@@ -1,14 +1,10 @@
 <?php
-$title = "Функции в PHP";
+$title = "⚡ Функции в PHP";
+$lead = "Объявление функций, параметры, возврат значений.";
+
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
-
-<h1 class="section-title">⚡ Функции в PHP</h1>
-
-<p class="lead">Объявление функций, параметры, возврат значений.</p>
-
-<a href="/index.php" class="back-link">← Назад к списку</a>
 
 <?php
 // ============================================================

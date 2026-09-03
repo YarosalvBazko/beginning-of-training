@@ -1,14 +1,9 @@
 <?php
-$title = "Switch-case в PHP";
+$title = "📝 Switch-case в PHP";
+$lead = "Альтернатива if/elseif для проверки равенства.";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
-
-<h1 class="section-title">📝 Switch-case в PHP</h1>
-
-<p class="lead">Альтернатива if/elseif для проверки равенства.</p>
-
-<a href="/index.php" class="back-link">← Назад к списку</a>
 
 <?php
 // ============================================================

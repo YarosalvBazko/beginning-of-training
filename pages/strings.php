@@ -1,14 +1,10 @@
 <?php
-$title = "Строки в PHP";
+$title = "📝 Строки в PHP";
+$lead = "Функции для работы со строками: длина, обрезка, регистр, поиск, хеширование.";
+
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
-
-<h1 class="section-title">📝 Строки в PHP</h1>
-
-<p class="lead">Функции для работы со строками: длина, обрезка, регистр, поиск, хеширование.</p>
-
-<a href="/index.php" class="back-link">← Назад к списку</a>
 
 <?php
 // ============================================================

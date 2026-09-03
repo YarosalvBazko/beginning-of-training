@@ -1,14 +1,10 @@
 <?php
 $title = "Дата и время PHP";
+$lead = "Форматирование даты, работа с временными метками.";
+
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
-
-<h1 class="section-title">⏰ Дата и время PHP</h1>
-
-<p class="lead">Форматирование даты, работа с временными метками.</p>
-
-<a href="/index.php" class="back-link">← Назад к списку</a>
 
 <?php
 // ============================================================
