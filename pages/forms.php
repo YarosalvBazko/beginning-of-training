@@ -2,7 +2,7 @@
 session_start();
 $title = "📝 Формы в PHP";
 $lead = "GET, POST, валидация, сессии, безопасность.";
-
+$doc_link = "https://www.php.net/manual/ru/tutorial.forms.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

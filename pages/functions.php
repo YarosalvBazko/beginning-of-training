@@ -1,7 +1,7 @@
 <?php
 $title = "⚡ Функции в PHP";
 $lead = "Объявление функций, параметры, возврат значений.";
-
+$doc_link = "https://www.php.net/manual/ru/functions.user-defined.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

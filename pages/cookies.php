@@ -1,7 +1,7 @@
 <?php
 $title = "🍪 Cookie в PHP";
 $lead = "Установка, чтение и удаление cookie.";
-
+$doc_link = "https://www.php.net/manual/ru/features.cookies.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

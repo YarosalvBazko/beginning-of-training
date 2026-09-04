@@ -1,7 +1,7 @@
 <?php
 $title = "📁 Работа с файлами в PHP";
 $lead = "Чтение, запись, проверка существования файлов.";
-
+$doc_link = "https://www.php.net/manual/ru/ref.filesystem.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

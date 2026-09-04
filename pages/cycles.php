@@ -1,7 +1,7 @@
 <?php
 $title = "🔄 Циклы в PHP";
 $lead = "Циклы for, while, do-while, break, continue..";
-
+$doc_link = 'https://www.php.net/manual/ru/control-structures.for.php';
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

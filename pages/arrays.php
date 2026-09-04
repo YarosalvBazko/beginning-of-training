@@ -2,6 +2,7 @@
 // --- Объявляем заголовок страницы ---
 $title = "📊 Массивы в PHP";
 $lead = "Основные операции с массивами: создание, изменение, удаление, сортировка.";
+$doc_link = "https://www.php.net/manual/ru/language.types.array.php";
 // --- Подключаем шапку ---
 require_once "../blocks/header.php";
 

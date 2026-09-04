@@ -36,5 +36,15 @@
         <?php if (isset($title) && isset($lead)): ?>
             <h1 class="section-title"><?php echo $title; ?></h1>
             <p class="lead"><?php echo $lead; ?></p>
-            <a href="/index.php" class="back-link">← Назад к списку</a>
+            
+            <!-- Навигация внизу: Назад + Документация -->
+            <div class="page-nav">
+                <a href="/index.php" class="back-link">← Назад к списку</a>
+                
+                <?php if (isset($doc_link)): ?>
+                    <a href="<?php echo $doc_link; ?>" target="_blank" class="doc-link-nav">
+                        Документация →
+                    </a>
+                <?php endif; ?>
+            </div>
         <?php endif; ?>

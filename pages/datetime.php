@@ -1,7 +1,7 @@
 <?php
 $title = "Дата и время PHP";
 $lead = "Форматирование даты, работа с временными метками.";
-
+$doc_link = "https://www.php.net/manual/ru/ref.datetime.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

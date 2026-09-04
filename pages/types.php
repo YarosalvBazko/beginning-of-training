@@ -1,7 +1,7 @@
 <?php
 $title = "📦 Типы данных в PHP";
 $lead = "Определение и проверка типов переменных.";
-
+$doc_link = "https://www.php.net/manual/ru/language.types.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

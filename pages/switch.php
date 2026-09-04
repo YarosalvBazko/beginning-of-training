@@ -1,6 +1,7 @@
 <?php
 $title = "📝 Switch-case в PHP";
 $lead = "Альтернатива if/elseif для проверки равенства.";
+$doc_link = "https://www.php.net/manual/ru/control-structures.switch.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

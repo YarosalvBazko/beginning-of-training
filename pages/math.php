@@ -1,7 +1,7 @@
 <?php
 $title = "🔢 Математика в PHP";
 $lead = "Арифметические операции, функции округления, случайные числа.";
-
+$doc_link = "https://www.php.net/manual/ru/ref.math.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>

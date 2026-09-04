@@ -1,7 +1,7 @@
 <?php
 $title = "📝 Строки в PHP";
 $lead = "Функции для работы со строками: длина, обрезка, регистр, поиск, хеширование.";
-
+$doc_link = "https://www.php.net/manual/ru/ref.strings.php";
 require_once "../blocks/header.php";
 require_once "../includes/DemoHelper.php";
 ?>
