@@ -9,8 +9,10 @@
 ```bash
 Beginning of training/
 ├── blocks/                     # Шапка и подвал сайта
-│   ├── header.php              # Меню и стили
+│   ├── header.php              # Меню, стили, заголовок
 │   └── footer.php              # Копирайт
+├── css/                        # Стили
+│   └── style.css               # Все CSS-стили
 ├── includes/                   # Вспомогательный код
 │   └── DemoHelper.php          # Класс для демонстрации кода
 ├── pages/                      # Страницы-демонстрации (11 тем)
@@ -25,7 +27,11 @@ Beginning of training/
 │   ├── types.php               # Типы данных
 │   ├── files.php               # Файлы
 │   └── forms.php               # Формы (GET, POST, сессии)
-└── index.php                   # Главная страница-каталог
+├── templates/                  # HTML-шаблоны
+│   └── forms/
+│       └── form.php            # Практическая форма
+├── index.php                   # Главная страница-каталог
+└── README.md                   # Документация
 ```
 
 ## 📚 Список тем
